@@ -69,7 +69,8 @@ protected:
 			_onRun(this);
 		if (_onDestory)
 			_onDestory(this);
-
+		
+		//完成工作唤醒等待的Close()函数
 		_sem.wakeup();
 	}
 private:
